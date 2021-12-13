@@ -1,14 +1,13 @@
-import collatz_function
+from collatz_function import collatz 
 
 try:
-	
- 	number = input("Please enter number: ")
- 	while 1:
-	 	integer = collatz(number)
-	 	print(ineger)
-	 	if integer == 1:
-	 		break 
-	 	else:
-	 		number = integer
+	num = int(input("Enter Number: "))
+	while True:
+		integer = collatz(num)
+		print(integer)
+		if integer == 1:
+			break 
+		else:
+			num = integer 
 except ValueError:
-	raise "Didn't write number, try again!!"
+	print("It is not number, try again!!")
